@@ -58,7 +58,7 @@ const randomDays = getRandomDaysInRange(18, 48); // Days 18 to 48 across Nov-Dec
 console.log("Random selected days:", randomDays);
 
 randomDays.forEach((day) => {
-  const month = day <= 30 ? 19 : 19; // November (10) and December (11)
+  const month = day <= 30 ? 10 : 11; // November (10) and December (11)
   const adjustedDay = day <= 30 ? day : day - 30; // Adjust for December
   const commitDate = new Date(2024, month, adjustedDay);
   const commitCount = getCommitCountForDay(adjustedDay);
